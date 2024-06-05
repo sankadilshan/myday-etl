@@ -1,0 +1,22 @@
+server:
+  port: 9090
+spring:
+  batch:
+    jdbc:
+      initialize-schema: always
+  application:
+    name: mydayuseretl
+  flyway:
+    baseline-on-migrate: true
+datasource:
+  db:
+    username: postgres
+    password: root
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/expense
+  query-timeout: 5
+  function-timeout: 3
+  max-active: 10
+  max-lifetime:  300000
+file:
+  input: coffee.csv
